@@ -24,7 +24,8 @@ input[type=text],input[type=email],select{width:100%;font:inherit;font-size:1rem
 input:focus,select:focus{outline:none;border-color:var(--g3)}
 .seg{display:flex;gap:8px}.seg label{flex:1;margin:0;font-weight:600;border:1.5px solid var(--line);border-radius:12px;padding:12px;text-align:center;cursor:pointer;background:#fff}
 .seg input{display:none}.seg input:checked+span{color:var(--g3)}.seg label:has(input:checked){border-color:var(--g3);background:#eef3e6}
-.hint{font-size:.82rem;color:var(--mut);margin:6px 0 0}
+.hint{font-size:.82rem;color:var(--mut);margin:6px 0 0}.ib{margin-top:10px;background:#fbf1dc;border:1px solid #efd9a8;border-radius:12px;padding:12px 14px;font-size:.9rem;line-height:1.5}.ib a,.ok a.app{color:var(--g3);font-weight:700}
+.cta2{display:block;margin:16px 0 6px;background:var(--g3);color:#fff!important;text-decoration:none;border-radius:14px;padding:15px;font:800 1.05rem Outfit,sans-serif}.ok .note{background:#eef0e4;border-radius:12px;padding:12px 14px;font-size:.9rem;color:var(--ink);text-align:left;margin-top:14px}
 .ck{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.9rem;margin-top:18px}.ck input{margin-top:4px;width:18px;height:18px;flex:0 0 auto}
 button{width:100%;margin-top:20px;border:0;border-radius:14px;background:var(--amb);color:#2a1c05;font:800 1.08rem Outfit,sans-serif;padding:16px;cursor:pointer;box-shadow:0 6px 18px #0002}
 button:disabled{opacity:.6}
@@ -44,31 +45,40 @@ footer{text-align:center;color:var(--mut);font-size:.85rem;padding:0 20px 40px}f
  <form id="f">
   <div class="steps"><div><b>1</b>Tu t'inscris</div><div><b>2</b>Tu reçois l'invitation Google Play</div><div><b>3</b>Tu testes 14 jours</div></div>
   <label for="pn">Prénom</label><input type="text" id="pn" autocomplete="given-name" required>
-  <label for="em">Adresse Gmail</label><input type="email" id="em" inputmode="email" autocomplete="email" placeholder="prenom@gmail.com" required>
-  <p class="hint">Google Play invite les testeurs par l'adresse de leur compte Google (souvent une adresse Gmail).</p>
+  <label for="em" id="eml">Adresse Gmail</label><input type="email" id="em" inputmode="email" autocomplete="email" placeholder="prenom@gmail.com" required>
+  <p class="hint" id="emh">Google Play invite les testeurs par l'adresse de leur compte Google (souvent une adresse Gmail).</p>
   <label>Ton téléphone</label>
   <div class="seg"><label><input type="radio" name="tel" value="Android" checked><span>🤖 Android</span></label><label><input type="radio" name="tel" value="iPhone"><span>🍏 iPhone</span></label></div>
-  <p class="hint" id="ih" style="display:none">Le test Google Play est réservé à Android, mais je te préviendrai de la sortie : ChasseLog sera aussi utilisable sur iPhone.</p>
+  <div class="ib" id="ih" style="display:none"><b>📵 Le test Google Play est réservé aux téléphones Android.</b> Avec un iPhone, tu ne pourras pas être testeur sur le Play Store.<br>Bonne nouvelle : ChasseLog fonctionne déjà sur iPhone en version web. Tu peux l'utiliser dès maintenant : <a href="https://chasselog-coder.github.io/ChasseLog/">ouvrir ChasseLog</a>. Laisse ton adresse ci-dessous pour être prévenu des nouveautés.</div>
   <label for="rg">Où chasses-tu ?</label>
   <select id="rg"><option>Wallonie</option><option>Flandre</option><option>France</option><option>Luxembourg</option><option>Autre pays</option></select>
   <label class="ck"><input type="checkbox" id="cs">J'accepte que ChasseLog utilise mon adresse uniquement pour le test et l'annonce de la sortie. Je peux demander sa suppression à tout moment.</label>
   <p class="err" id="er"></p>
   <button id="go" type="submit">Je m'inscris comme testeur</button>
  </form>
- <div class="ok" id="ok"><div class="big">🎯</div><h2>Merci, c'est noté !</h2><p>Tu recevras l'invitation par e-mail dès que la phase de test commence. En attendant, suis l'avancement sur notre <a href="https://www.facebook.com/share/14xCaJZ8BXr/">page Facebook</a>.</p></div>
+ <div class="ok" id="ok"><div class="big">🎯</div><h2>Merci, c'est noté !</h2>
+  <div id="okA"><p>Tu recevras un e-mail dès que l'application Android sera disponible en test sur Google Play.</p>
+   <p><b>En attendant, pour te remercier</b>, tu as accès dès maintenant à la version web de ChasseLog :</p>
+   <a class="cta2" href="https://chasselog-coder.github.io/ChasseLog/">Ouvrir ChasseLog →</a>
+   <div class="note">💾 Tes journées et tes sauvegardes de la version web pourront ensuite être importées dans l'application Android : rien ne sera perdu.<br><br>📲 Astuce : dans Chrome, menu ⋮ › « Installer l'application » pour l'avoir sur ton écran d'accueil.</div></div>
+  <div id="okI" style="display:none"><p>Je te préviendrai par e-mail des nouveautés et de la sortie officielle.</p>
+   <p>Tu peux déjà utiliser ChasseLog sur ton iPhone :</p>
+   <a class="cta2" href="https://chasselog-coder.github.io/ChasseLog/">Ouvrir ChasseLog →</a>
+   <div class="note">📲 Pour l'avoir sur ton écran d'accueil : ouvre le lien dans <b>Safari</b>, touche le bouton Partager, puis « Sur l'écran d'accueil ».</div></div>
+  <p style="margin-top:16px">Suis l'avancement sur notre <a href="https://www.facebook.com/share/14xCaJZ8BXr/">page Facebook</a>.</p></div>
 </div>
 <footer><a href="confidentialite.html">Politique de confidentialité</a> · © 2026 ChasseLog · Fait en Belgique 🇧🇪</footer>
 <script>
 const K="d25e1cea-b1cc-4d3c-bbb6-cc30decffc29",$=s=>document.querySelector(s);
-document.querySelectorAll('[name=tel]').forEach(r=>r.onchange=()=>$("#ih").style.display=r.value=="iPhone"&&r.checked?"block":"none");
+const upd=()=>{const i=document.querySelector('[name=tel]:checked').value=="iPhone";$("#ih").style.display=i?"block":"none";$("#go").textContent=i?"Être prévenu des nouveautés":"Je m'inscris comme testeur";$("#eml").textContent=i?"Adresse e-mail":"Adresse Gmail";$("#emh").style.display=i?"none":"block"};document.querySelectorAll('[name=tel]').forEach(r=>r.onchange=upd);
 $("#f").onsubmit=async e=>{e.preventDefault();const er=t=>{$("#er").textContent=t;$("#er").style.display=t?"block":"none"};
  const em=$("#em").value.trim(),pn=$("#pn").value.trim(),tel=document.querySelector('[name=tel]:checked').value;
  if(!pn)return er("Indique ton prénom.");if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em))return er("Cette adresse e-mail ne semble pas valide.");
  if(!$("#cs").checked)return er("Coche la case pour accepter l'utilisation de ton adresse.");
  er("");const b=$("#go");b.disabled=true;b.textContent="Envoi…";
- try{const r=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({access_key:K,subject:"ChasseLog – Nouveau testeur ("+tel+")",from_name:"ChasseLog – testeurs",prenom:pn,email:em,telephone:tel,region:$("#rg").value,consentement:"oui",source:"chasselog.be/testeur"})}),j=await r.json();
-  if(!(j&&j.success))throw 0;$("#f").style.display="none";$("#ok").style.display="block"}
- catch(x){b.disabled=false;b.textContent="Je m'inscris comme testeur";er("L'envoi a échoué. Vérifie ta connexion et réessaie.")}};
+ try{const r=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({access_key:K,subject:tel=="iPhone"?"ChasseLog – Inscription iPhone (nouveautés)":"ChasseLog – Nouveau testeur Android",from_name:"ChasseLog – testeurs",prenom:pn,email:em,telephone:tel,region:$("#rg").value,consentement:"oui",source:"chasselog.be/testeur"})}),j=await r.json();
+  if(!(j&&j.success))throw 0;$("#f").style.display="none";$("#ok").style.display="block";if(tel=="iPhone"){$("#okA").style.display="none";$("#okI").style.display="block"}window.scrollTo(0,0)}
+ catch(x){b.disabled=false;upd();er("L'envoi a échoué. Vérifie ta connexion et réessaie.")}};
 </script>
 </body>
 </html>
