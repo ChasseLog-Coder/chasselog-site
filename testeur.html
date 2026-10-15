@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Devenir testeur – ChasseLog</title>
+<meta name="description" content="Inscris-toi pour tester ChasseLog, le carnet de chasse gratuit, avant sa sortie sur Android.">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g1:#1f3317;--g2:#2c4721;--g3:#3f5a2b;--cream:#f1efe6;--card:#fbfaf5;--ink:#26301f;--mut:#6d7461;--amb:#e8a032;--line:#d9d6c5}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+.hero{background:radial-gradient(120% 90% at 50% 0%,var(--g2),var(--g1));color:#fff;padding:26px 20px 70px;text-align:center}
+.logo{display:inline-flex;align-items:center;gap:10px;font:800 1.25rem Outfit,sans-serif;color:#fff;text-decoration:none}.logo img{width:34px;height:34px;border-radius:9px}
+.kick{font:700 .78rem Outfit,sans-serif;letter-spacing:.22em;color:var(--amb);margin-top:28px}
+h1{font:800 clamp(2rem,6vw,2.8rem)/1.1 Outfit,sans-serif;margin:10px 0 12px}h1 em{font-style:normal;color:var(--amb)}
+.hero p{color:#dfe3d2;max-width:30em;margin:0 auto;font-size:1.05rem}
+.card{max-width:520px;margin:-46px auto 40px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px 22px;box-shadow:0 14px 40px #0002}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 22px;text-align:center}
+.steps div{background:#eef0e4;border-radius:14px;padding:12px 8px;font-size:.84rem;color:var(--mut)}.steps b{display:block;font:800 1.3rem Outfit,sans-serif;color:var(--g3)}
+label{display:block;font-weight:700;font-size:.92rem;margin:14px 0 6px}
+input[type=text],input[type=email],select{width:100%;font:inherit;font-size:1rem;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+input:focus,select:focus{outline:none;border-color:var(--g3)}
+.seg{display:flex;gap:8px}.seg label{flex:1;margin:0;font-weight:600;border:1.5px solid var(--line);border-radius:12px;padding:12px;text-align:center;cursor:pointer;background:#fff}
+.seg input{display:none}.seg input:checked+span{color:var(--g3)}.seg label:has(input:checked){border-color:var(--g3);background:#eef3e6}
+.hint{font-size:.82rem;color:var(--mut);margin:6px 0 0}
+.ck{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.9rem;margin-top:18px}.ck input{margin-top:4px;width:18px;height:18px;flex:0 0 auto}
+button{width:100%;margin-top:20px;border:0;border-radius:14px;background:var(--amb);color:#2a1c05;font:800 1.08rem Outfit,sans-serif;padding:16px;cursor:pointer;box-shadow:0 6px 18px #0002}
+button:disabled{opacity:.6}
+.err{color:#a4452c;font-weight:600;margin:12px 0 0;display:none}
+.ok{display:none;text-align:center}.ok .big{font-size:3rem}.ok h2{font:800 1.6rem Outfit,sans-serif;margin:6px 0 8px}.ok p{color:var(--mut)}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding:0 20px 40px}footer a{color:var(--g3)}
+</style>
+</head>
+<body>
+<div class="hero">
+ <a class="logo" href="index.html"><img src="img/icon.png" alt="">ChasseLog</a>
+ <div class="kick">Bêta-test Android</div>
+ <h1>Deviens <em>testeur</em> de ChasseLog</h1>
+ <p>Aide-moi à préparer la sortie sur Google Play : teste l'application pendant 14 jours et dis-moi ce que tu en penses.</p>
+</div>
+<div class="card">
+ <form id="f">
+  <div class="steps"><div><b>1</b>Tu t'inscris</div><div><b>2</b>Tu reçois l'invitation Google Play</div><div><b>3</b>Tu testes 14 jours</div></div>
+  <label for="pn">Prénom</label><input type="text" id="pn" autocomplete="given-name" required>
+  <label for="em">Adresse Gmail</label><input type="email" id="em" inputmode="email" autocomplete="email" placeholder="prenom@gmail.com" required>
+  <p class="hint">Google Play invite les testeurs par l'adresse de leur compte Google (souvent une adresse Gmail).</p>
+  <label>Ton téléphone</label>
+  <div class="seg"><label><input type="radio" name="tel" value="Android" checked><span>🤖 Android</span></label><label><input type="radio" name="tel" value="iPhone"><span>🍏 iPhone</span></label></div>
+  <p class="hint" id="ih" style="display:none">Le test Google Play est réservé à Android, mais je te préviendrai de la sortie : ChasseLog sera aussi utilisable sur iPhone.</p>
+  <label for="rg">Où chasses-tu ?</label>
+  <select id="rg"><option>Wallonie</option><option>Flandre</option><option>France</option><option>Luxembourg</option><option>Autre pays</option></select>
+  <label class="ck"><input type="checkbox" id="cs">J'accepte que ChasseLog utilise mon adresse uniquement pour le test et l'annonce de la sortie. Je peux demander sa suppression à tout moment.</label>
+  <p class="err" id="er"></p>
+  <button id="go" type="submit">Je m'inscris comme testeur</button>
+ </form>
+ <div class="ok" id="ok"><div class="big">🎯</div><h2>Merci, c'est noté !</h2><p>Tu recevras l'invitation par e-mail dès que la phase de test commence. En attendant, suis l'avancement sur notre <a href="https://www.facebook.com/share/14xCaJZ8BXr/">page Facebook</a>.</p></div>
+</div>
+<footer><a href="confidentialite.html">Politique de confidentialité</a> · © 2026 ChasseLog · Fait en Belgique 🇧🇪</footer>
+<script>
+const K="d25e1cea-b1cc-4d3c-bbb6-cc30decffc29",$=s=>document.querySelector(s);
+document.querySelectorAll('[name=tel]').forEach(r=>r.onchange=()=>$("#ih").style.display=r.value=="iPhone"&&r.checked?"block":"none");
+$("#f").onsubmit=async e=>{e.preventDefault();const er=t=>{$("#er").textContent=t;$("#er").style.display=t?"block":"none"};
+ const em=$("#em").value.trim(),pn=$("#pn").value.trim(),tel=document.querySelector('[name=tel]:checked').value;
+ if(!pn)return er("Indique ton prénom.");if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em))return er("Cette adresse e-mail ne semble pas valide.");
+ if(!$("#cs").checked)return er("Coche la case pour accepter l'utilisation de ton adresse.");
+ er("");const b=$("#go");b.disabled=true;b.textContent="Envoi…";
+ try{const r=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({access_key:K,subject:"ChasseLog – Nouveau testeur ("+tel+")",from_name:"ChasseLog – testeurs",prenom:pn,email:em,telephone:tel,region:$("#rg").value,consentement:"oui",source:"chasselog.be/testeur"})}),j=await r.json();
+  if(!(j&&j.success))throw 0;$("#f").style.display="none";$("#ok").style.display="block"}
+ catch(x){b.disabled=false;b.textContent="Je m'inscris comme testeur";er("L'envoi a échoué. Vérifie ta connexion et réessaie.")}};
+</script>
+</body>
+</html>
