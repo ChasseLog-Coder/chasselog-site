@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Politique de confidentialité – ChasseLog</title>
+<meta name="description" content="Comment ChasseLog traite tes données : tout reste sur ton téléphone, statistiques anonymes uniquement avec ton accord.">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g1:#1f3317;--g3:#3f5a2b;--cream:#f1efe6;--card:#fbfaf5;--ink:#26301f;--mut:#6d7461;--amb:#e8a032;--line:#d9d6c5}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+header{background:var(--g1);color:#fff}header .w{display:flex;align-items:center;gap:10px;height:64px}
+header a{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:800 1.2rem Outfit,sans-serif}header img{width:32px;height:32px;border-radius:8px}
+.w{max-width:760px;margin:0 auto;padding:0 20px}
+main{padding:36px 0 60px}h1,h2{font-family:Outfit,system-ui,sans-serif;line-height:1.15}
+h1{font-size:2rem;margin:0 0 6px}h2{font-size:1.25rem;margin:30px 0 8px;color:var(--g3)}
+.mut{color:var(--mut)}.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:20px 0}
+ul{padding-left:20px}li{margin:4px 0}a{color:var(--g3)}
+table{width:100%;border-collapse:collapse;font-size:.93rem;margin:8px 0}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}th{font-weight:700}
+footer{background:var(--g1);color:#c7cdb7;padding:26px 0;font-size:.9rem}footer a{color:#e9e6d6}
+</style>
+</head>
+<body>
+<header><div class="w"><a href="index.html"><img src="img/icon.png" alt="">ChasseLog</a></div></header>
+<main><div class="w">
+<h1>Politique de confidentialité</h1>
+<p class="mut">Dernière mise à jour : 15 octobre 2026</p>
+
+<div class="box"><b>En bref :</b> ChasseLog n'a pas de compte utilisateur et ne possède pas de serveur qui stocke tes données. Tes journées, tes tirs, tes positions, tes photos et tes documents restent <b>uniquement sur ton téléphone</b>. Les statistiques d'utilisation sont anonymes et ne sont envoyées que si tu les acceptes.</div>
+
+<h2>1. Qui sommes-nous ?</h2>
+<p>ChasseLog est une application de carnet de chasse développée bénévolement en Belgique. Responsable du traitement : l'éditeur de ChasseLog, joignable à <a href="mailto:contact.chasselog@gmail.com">contact.chasselog@gmail.com</a>.</p>
+
+<h2>2. Les données qui restent sur ton téléphone</h2>
+<p>Tout ce que tu encodes est enregistré dans la mémoire de ton appareil (stockage du navigateur ou de l'application) et n'est envoyé à personne :</p>
+<ul>
+<li>journées de chasse, lieux, postes, tirs, animaux, munitions, notes et photos ;</li>
+<li>positions GPS que tu choisis d'enregistrer ;</li>
+<li>armes, espèces et modes de chasse favoris, région ou département choisi ;</li>
+<li>documents ajoutés dans « Mes documents » (permis, assurance, carte d'identité…).</li>
+</ul>
+<p>Si tu désinstalles l'application ou effaces les données du navigateur, ces informations sont supprimées. Tu peux en faire une sauvegarde à tout moment (Paramètres › Exporter). Les documents ne sont pas inclus dans les sauvegardes ni envoyés nulle part.</p>
+
+<h2>3. Les données envoyées, et pourquoi</h2>
+<table>
+<tr><th>Quand</th><th>Ce qui est envoyé</th><th>À qui</th></tr>
+<tr><td>Statistiques anonymes <b>(seulement si tu acceptes)</b></td><td>Événements d'utilisation (ex. « journée créée », « BANG », « partage »), version de l'app, type d'appareil, et si tu l'as choisi ta région/département, tes espèces et modes favoris. <b>Jamais</b> tes tirs, lieux, positions GPS, photos ni documents. Aucun profil personnel n'est créé.</td><td>PostHog (serveurs dans l'Union européenne)</td></tr>
+<tr><td>Si tu refuses les statistiques</td><td>Un seul signal anonyme « refus », sans identifiant, pour compter le nombre de refus.</td><td>PostHog (UE)</td></tr>
+<tr><td>Météo d'une journée</td><td>Les coordonnées approximatives du lieu de chasse, pour obtenir les prévisions.</td><td>Open-Meteo</td></tr>
+<tr><td>Adresse d'un lieu GPS</td><td>Les coordonnées du lieu, pour afficher une adresse lisible.</td><td>OpenStreetMap (Nominatim)</td></tr>
+<tr><td>Affichage de la carte</td><td>Les zones de carte affichées (requêtes de tuiles).</td><td>OpenStreetMap</td></tr>
+<tr><td>Dates d'ouverture</td><td>Téléchargement du fichier des dates (aucune donnée personnelle envoyée).</td><td>Hébergement de ChasseLog (GitHub)</td></tr>
+<tr><td>Formulaire « Donner mon avis »</td><td>Tes réponses, ton message, la version de l'app et le type d'appareil. Ton e-mail seulement si tu le donnes.</td><td>Web3Forms, qui transmet le message par e-mail à ChasseLog</td></tr>
+<tr><td>Inscription « être prévenu »</td><td>Ton adresse e-mail, avec ton consentement explicite, uniquement pour t'annoncer les nouveautés importantes.</td><td>Web3Forms → e-mail à ChasseLog</td></tr>
+<tr><td>Dons (Ko-fi)</td><td>ChasseLog ne reçoit aucune donnée de paiement. Le paiement se fait entièrement sur Ko-fi, selon sa propre politique.</td><td>Ko-fi, Stripe ou PayPal</td></tr>
+</table>
+<p>ChasseLog n'affiche pas de publicité, ne vend aucune donnée et ne partage rien avec des tiers à des fins commerciales.</p>
+
+<h2>4. Autorisations du téléphone</h2>
+<ul>
+<li><b>Localisation</b> : uniquement quand tu enregistres une position ou un lieu, et pour la météo du lieu.</li>
+<li><b>Photos / fichiers</b> : uniquement quand tu ajoutes une photo ou un document.</li>
+<li><b>Notifications</b> (version Android) : pour les rappels que tu actives.</li>
+</ul>
+
+<h2>5. Base légale et durée</h2>
+<p>Les statistiques anonymes reposent sur ton consentement, que tu peux retirer à tout moment dans Paramètres › Statistiques anonymes. Les messages et adresses e-mail reçus sont conservés le temps nécessaire pour y répondre ou t'informer, et supprimés sur simple demande.</p>
+
+<h2>6. Tes droits</h2>
+<p>Conformément au RGPD, tu peux demander l'accès, la rectification ou la suppression des données que ChasseLog aurait reçues (messages, adresse e-mail) en écrivant à <a href="mailto:contact.chasselog@gmail.com">contact.chasselog@gmail.com</a>. Les données stockées sur ton téléphone sont sous ton seul contrôle. Tu peux aussi introduire une réclamation auprès de l'Autorité de protection des données (Belgique).</p>
+
+<h2>7. Mineurs</h2>
+<p>ChasseLog s'adresse aux chasseurs titulaires d'un permis. L'application n'est pas destinée aux enfants.</p>
+
+<h2>8. Modifications</h2>
+<p>Cette politique peut évoluer avec l'application (par exemple si des comptes en ligne sont ajoutés). La date de mise à jour figure en haut de la page ; les changements importants seront annoncés dans l'application.</p>
+</div></main>
+<footer><div class="w"><a href="index.html">← Retour à l'accueil</a> · © 2026 ChasseLog · Fait en Belgique 🇧🇪</div></footer>
+</body>
+</html>
