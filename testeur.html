@@ -91,8 +91,9 @@ $("#f").onsubmit=async e=>{e.preventDefault();const er=t=>{$("#er").textContent=
  if(!$("#cs").checked)return er("Coche la case pour accepter l'utilisation de ton adresse.");
  er("");const b=$("#go");b.disabled=true;b.textContent="Envoi…";
  try{const r=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({access_key:K,subject:tel=="iPhone"?"ChasseLog – Inscription iPhone (nouveautés)":"ChasseLog – Nouveau testeur Android",from_name:"ChasseLog – testeurs",prenom:pn,email:em,telephone:tel,region:$("#rg").value,consentement:"oui",source:"chasselog.be/testeur"})}),j=await r.json();
-  if(!(j&&j.success))throw 0;try{localStorage.setItem("cl_testeur",JSON.stringify({pn,tel}))}catch(x){}showOk(tel);window.scrollTo(0,0)}
+  if(!(j&&j.success))throw 0;try{localStorage.setItem("cl_testeur",JSON.stringify({pn,tel}))}catch(x){}showOk(tel);window.scrollTo(0,0);window.clStat&&clStat("site_signup",{tel:tel=="iPhone"?"iphone":"android"})}
  catch(x){b.disabled=false;upd();er("L'envoi a échoué. Vérifie ta connexion et réessaie.")}};
 </script>
+<script src="stats.js" defer></script>
 </body>
 </html>

@@ -48,6 +48,7 @@ footer{background:var(--g1);color:#c7cdb7;padding:26px 0;font-size:.9rem}footer 
 <tr><th>Quand</th><th>Ce qui est envoyé</th><th>À qui</th></tr>
 <tr><td>Statistiques anonymes <b>(seulement si tu acceptes)</b></td><td>Événements d'utilisation (ex. « journée créée », « BANG », « partage »), version de l'app, type d'appareil, et si tu l'as choisi ta région/département, tes espèces et modes favoris. Dans l'application Android, lorsqu'une journée a un lieu de rendez-vous : le nom de la province (Belgique) ou du département (France) où elle se situe, calculé sur ton téléphone. <b>Jamais</b> tes tirs, le lieu lui-même, ses coordonnées, tes positions GPS, photos ni documents. Aucun profil personnel n'est créé.</td><td>PostHog (serveurs dans l'Union européenne)</td></tr>
 <tr><td>Si tu refuses les statistiques</td><td>Un seul signal anonyme « refus », sans identifiant, pour compter le nombre de refus.</td><td>PostHog (UE)</td></tr>
+<tr><td>Visite du site chasselog.be</td><td>Statistiques de fréquentation anonymes : page consultée, site d'où tu arrives (ex. Facebook), taille d'écran, et les boutons cliqués (Facebook, Ko-fi, devenir testeur). Un identifiant aléatoire est créé pour la visite et oublié à la fermeture de l'onglet. <b>Aucun cookie</b>, aucun profil, et rien n'est envoyé si ton navigateur demande de ne pas être suivi. Le contenu du formulaire testeur (prénom, e-mail) n'y est jamais inclus.</td><td>PostHog (UE)</td></tr>
 <tr><td>Météo d'une journée</td><td>Les coordonnées approximatives du lieu de chasse, pour obtenir les prévisions.</td><td>Open-Meteo</td></tr>
 <tr><td>Météo de l'accueil <b>(seulement si tu autorises la localisation)</b></td><td>Ta position actuelle, arrondie à environ 1 km, pour afficher la météo et le lever/coucher du soleil là où tu es. Elle n'est pas conservée par ChasseLog.</td><td>Open-Meteo</td></tr>
 <tr><td>Adresse d'un lieu GPS</td><td>Les coordonnées du lieu, pour afficher une adresse lisible.</td><td>OpenStreetMap (Nominatim)</td></tr>
@@ -87,5 +88,6 @@ footer{background:var(--g1);color:#c7cdb7;padding:26px 0;font-size:.9rem}footer 
 <p>Cette politique peut évoluer avec l'application (par exemple si des comptes en ligne sont ajoutés). La date de mise à jour figure en haut de la page ; les changements importants seront annoncés dans l'application.</p>
 </div></main>
 <footer><div class="w"><a href="index.html">← Retour à l'accueil</a> · © 2026 ChasseLog · Fait en Belgique 🇧🇪</div></footer>
+<script src="stats.js" defer></script>
 </body>
 </html>
