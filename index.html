@@ -29,8 +29,9 @@ a{color:inherit}
 .btn{display:inline-flex;align-items:center;gap:9px;border-radius:14px;padding:15px 22px;font:700 1.02rem Outfit,sans-serif;text-decoration:none;border:0}
 .btn.pri{background:var(--amb);color:#2a1c05;box-shadow:0 6px 18px #0004}.btn.sec{background:#ffffff14;color:#fff;border:1.5px solid #ffffff40}
 .btn small{display:block;font:600 .72rem system-ui;opacity:.75}
-.store{display:inline-flex;align-items:center;gap:12px;background:#0b1208;color:#fff;border:1.5px solid #ffffff55;border-radius:14px;padding:10px 20px 10px 14px;text-decoration:none;width:340px;max-width:100%;box-shadow:0 6px 18px #0004}
-.store .si{font-size:1.7rem;line-height:1;color:var(--amb);width:30px;text-align:center}.store small{display:block;font:600 .74rem system-ui;white-space:nowrap;color:#eadcbc}.store b{display:block;font:800 1.4rem/1.15 Outfit,sans-serif}
+.cta.st{display:grid;grid-template-columns:1fr 1fr;max-width:540px}
+.store{display:flex;align-items:center;gap:10px;background:#0b1208;color:#fff;border:1.5px solid #ffffff55;border-radius:14px;padding:10px 14px 10px 12px;text-decoration:none;min-width:0;box-shadow:0 6px 18px #0004}
+.store .si{font-size:1.6rem;line-height:1;color:var(--amb);width:28px;flex:0 0 28px;text-align:center}.store small{display:block;font:600 .72rem/1.25 system-ui;color:#eadcbc}.store b{display:block;font:800 1.4rem/1.15 Outfit,sans-serif}
 .store.me{border-color:var(--amb);box-shadow:0 0 0 3px #e8a03244,0 6px 18px #0004}.store:hover{border-color:var(--amb)}
 .ic2 .btn{margin-top:16px}.ic2 .btn.pri{box-shadow:none}
 .gnote{margin:12px 0 16px;max-width:470px;font:.9rem/1.45 system-ui;color:#dfe6d2;opacity:.9}.gnote b{color:#fff}
@@ -71,6 +72,7 @@ footer a{color:#e9e6d6;margin-right:18px}
  .top nav{display:none}.hero{padding-top:96px}.hero .wrap{grid-template-columns:1fr}.phones{height:380px}.ph{width:180px}.beast{width:140px;right:-10px}
  .feat,.inst,.sup .wrap,.band .wrap{grid-template-columns:1fr}section{padding:60px 0}
 }
+@media(max-width:520px){.cta.st{gap:10px}.store{flex-direction:column;align-items:flex-start;gap:6px;padding:12px}.store .si{font-size:1.4rem;width:auto;flex:none}.store b{font-size:1.3rem}.store small{font-size:.7rem}}
 </style>
 </head>
 <body>
@@ -82,9 +84,9 @@ footer a{color:#e9e6d6;margin-right:18px}
   <div class="kick">Gratuit · Wallonie et France</div>
   <h1>Ton carnet de chasse <em>dans la poche.</em></h1>
   <p class="lead">Tes journées, tes tirs, les périodes d'ouverture de ta région et tes documents : tout est au même endroit, même sans réseau au fond du bois.</p>
-  <div class="cta">
+  <div class="cta st">
    <a class="store" id="sA" href="testeur.html"><span class="si">▶</span><span><small>En phase de tests fermés – rejoins-nous</small><b>Google Play</b></span></a>
-   <a class="store" id="sI" href="iphone.html"><span class="si">🍏</span><span><small>Version web · accès par e-mail</small><b>iPhone</b></span></a>
+   <a class="store" id="sI" href="iphone.html"><span class="si">🍏</span><span><small>Version web · accès par e&#8209;mail</small><b>iPhone</b></span></a>
   </div>
   <p class="gnote">🤖 <b>Google Play : réservé aux téléphones Android.</b> Ton accès au test arrive par e-mail en quelques heures maximum.<br>🍏 <b>iPhone :</b> ChasseLog fonctionne déjà en version web, en attendant l'App Store.</p>
   <div class="trust"><span>Sans publicité</span><span>Données sur ton téléphone</span><span>Fait par un chasseur</span></div>
