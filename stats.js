@@ -20,7 +20,7 @@
  window.clStat=send;
  send("$pageview",{});
  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.getAttribute("href"),d="";
-  if(/facebook\.com/.test(h))d="facebook";else if(/ko-fi\.com/.test(h))d="kofi";else if(/testeur\.html/.test(h))d="testeur";else if(/iphone\.html/.test(h))d="iphone";
+  if(/facebook\.com/.test(h))d="facebook";else if(/ko-fi\.com/.test(h))d="kofi";else if(/android\.html/.test(h))d="android";else if(/iphone\.html/.test(h))d="iphone";
   else if(/github\.io\/ChasseLog/.test(a.href))d="app";else if(/play\.google/.test(h))d="play";else if(/^mailto:/.test(h))d="contact";
   if(d)send("site_click",{dest:d})},true);
 })();
