@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "be.chasselog.app",
+    "sha256_cert_fingerprints": [
+      "89:07:26:5C:17:CB:7C:5E:61:55:76:02:4D:1D:3E:48:97:F5:2C:A2:14:48:6D:CC:02:23:88:50:33:DC:96:77"
+    ]
+  }
+}]
